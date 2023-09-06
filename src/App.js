@@ -1,6 +1,5 @@
 import React from 'react';
 
-import logo from './logo.svg';
 import './App.css';
 import '../src/components/Heroes.css';
 import Heroes from '../src/components/Heroes';
@@ -117,8 +116,18 @@ class App extends React.Component {
     return (
     <div className="App">
   {
-    heroes1.map((hero) => 
-    <Heroes name={hero.name} universe={hero.universe} alterego={hero.alterego} occupation={hero.occupation} friends={hero.friends} superpowers={hero.superpowers} url={hero.url} info={hero.info}></Heroes>
+    heroes1.map((hero) => (
+    <Heroes 
+    name={hero.name} 
+    key={hero.name}
+    universe={hero.universe} 
+    alterego={hero.alterego} 
+    occupation={hero.occupation} 
+    friends={hero.friends} 
+    superpowers={hero.superpowers} 
+    url={hero.url} 
+    info={hero.info}/>
+    )
     )
   }
     </div>
